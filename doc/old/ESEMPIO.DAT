@@ -1,0 +1,83 @@
+#
+#
+# file di controllo per Ostinato-II
+#
+# divisore dei campi ----> |
+#
+# vlin|<at>|<start>|<end>|<inc>|<file>|<n. ripet.>|<amp>|<pan>|<rev>|<info>
+#
+# dove:
+#       at      =       action time
+#       start   =       durata del primo segmento
+#       end     =       durata dell'ultimo segmento
+#       inc     =       incremento da un segmento all'altro
+#       file    =       nome del file aiff del frammento
+#       n.ripet =       numero di ripetizioni del frammento all'interno
+#                       del segmento (ne fa n+1 perche' aggiunge quello
+#                       finale)(se il numero di ripetizioni e` negativo
+#                       fa una sola ripetizione)
+#       amp     =       ampiezza (in dB)
+#       pan     =       posizionamento (1 = tutto a sinistra, 0 = tutto
+#                       a destra, intermedie numeri frazionari)
+#       rev     =       quantita` di riverbero (scegliere una scala di
+#                       posizioni da 0 a 5)
+#       info    =       commento a piacere
+#       
+# vlog|<at>|<start>|<end>|<inc>|<incinc>|<file>|<n. ripet.>|<amp>|<pan>|<rev>|<info>
+#
+# dove:
+#       at      =       action time
+#       start   =       durata del primo segmento
+#       end     =       durata dell'ultimo segmento
+#       inc     =       incremento da un segmento all'altro
+#       incinc  =       incremento dell'incremento
+#       file    =       nome del file aiff del frammento
+#       n.ripet =       numero di ripetizioni del frammento all'interno
+#                       del segmento (ne fa n+1 perche' aggiunge quello
+#                       finale)(se il numero di ripetizioni e` negativo
+#                       fa una sola ripetizione)
+#       amp     =       ampiezza (in dB)
+#       pan     =       posizionamento (1 = tutto a sinistra, 0 = tutto
+#                       a destra, intermedie numeri frazionari)
+#       rev     =       quantita` di riverbero (scegliere una scala di
+#                       posizioni da 0 a 5)
+#       info    =       commento a piacere
+#       
+#
+# basso|<at>|<start>|<end>|<inc>|<dur>|<durmax-rip>|<durmin-rip>|\
+#       <inc-rip>|<port>|<mod>|<amp>|<inc amp>|<pan>|<info>
+#
+# dove:
+#       at      =       action time
+#       start   =       durata del primo segmento
+#       end     =       durata dell'ultimo segmento
+#       inc     =       incremento da un segmento all'altro
+#       dur     =       durata del singolo impulso
+#       durmax-rip =    intervallo massimo tra ogni impulso
+#       durmin-rip =    intervallo minimo tra ogni impulso
+#       inc-rip =       incremento dell'intervallo ad ogni impulso
+#       port    =       rapporto tra frequenza base (25) e portante
+#       mod     =       rapporto tra frequenza base (25) e modulante
+#       amp     =       ampiezza (in dB)
+#       inc amp =       incremento ampiezza
+#       pan     =       posizionamento (1 = tutto a sinistra, 0 = tutto
+#                       a destra, intermedie numeri frazionari)
+#       info    =       commento a piacere
+#
+#
+vlin|25|26|12|-1|o-c.aiff|3|64|1|0|orietta - contro
+#
+vlin|25|26|12|-1|o-c.aiff|-3|64|1|0|orietta - single
+#
+vlog|25|26|12|-1|-1|o-c.aiff|3|64|1|0|orietta - contro log
+#
+vlrip|0|39|15|-1.5|c-tro-4.aiff|-1|60|0|0|A1.1 - con tro      
+# 
+basso|15|67|32|-2.5|arpa-4-g.aiff|1.47|2|2|0|1.9|1.1|60|2|1|basso B1
+#
+basso|15|67|32|-2.5|chit-2-m.aiff|12.85|2|1|-0.0043|0.9|2.1|64|1.2|0|basso B2
+#
+basso|757|15|15|0|arpa-4-g.aiff|1.47|2|2|0|1.9|1.1|88|0|0.5|basso B0
+#
+# direct|i1  30 3  70.00 200 18 1 0 2 2 2   0.50   0.50
+#
